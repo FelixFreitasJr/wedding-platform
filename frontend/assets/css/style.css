@@ -1,0 +1,27 @@
+header{
+
+    width:100%;
+
+}
+
+main{
+
+    width:100%;
+
+}
+
+section{
+
+    width:100%;
+
+    padding:80px 20px;
+
+}
+
+.container{
+
+    width:min(100%,1200px);
+
+    margin:auto;
+
+}

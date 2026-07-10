@@ -1,0 +1,37 @@
+:root {
+
+    /* Cores */
+
+    --primary-color: #A9D6F5;
+    --secondary-color: #27B4E5;
+    --accent-color: #8FB996;
+
+    --white: #FFFFFF;
+
+    --background: #F8FCFF;
+
+    --text-color: #3D4A57;
+
+    --text-light: #6E7B88;
+
+    --border-color: #D9EAF5;
+
+    --shadow: rgba(61, 74, 87, .08);
+
+    /* Fontes */
+
+    --font-title: "Great Vibes", cursive;
+
+    --font-heading: "Cormorant Garamond", serif;
+
+    --font-body: "Poppins", sans-serif;
+
+    /* Tamanhos */
+
+    --container-width: 1200px;
+
+    --radius: 18px;
+
+    --transition: .35s ease;
+
+}
