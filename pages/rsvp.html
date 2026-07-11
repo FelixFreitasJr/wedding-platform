@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirmação de Presença | Viviane & Everson</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/rsvp.css">
+
+</head>
+
+<body>
+
+<section id="rsvp">
+
+    <div class="container">
+
+        <p class="hero-subtitle">
+            Temos a alegria de convidar você para celebrar conosco
+        </p>
+
+        <h1 class="hero-title">
+            Viviane
+            <span>&</span>
+            Everson
+        </h1>
+
+        <p class="hero-date">
+            19 de Junho de 2027
+        </p>
+
+        <hr>
+
+        <h2 class="section-title">
+            Confirmação de Presença
+        </h2>
+
+        <p class="hero-text">
+
+            Sua presença tornará este dia ainda mais especial.
+            Pedimos que confirme sua participação.
+
+        </p>
+
+        <form id="rsvpForm">
+
+            <label for="nome">Nome Completo</label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+            <label for="telefone">WhatsApp</label>
+
+            <input
+                type="tel"
+                id="telefone"
+                placeholder="(21) 99999-9999"
+                required
+            >
+
+            <label>Você irá comparecer?</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="presenca" value="Sim" checked>
+                    Sim
+                </label>
+
+                <label>
+                    <input type="radio" name="presenca" value="Não">
+                    Não
+                </label>
+
+            </div>
+
+            <label for="adultos">Quantidade de Adultos</label>
+
+            <select id="adultos">
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+            </select>
+
+            <label for="criancas">Quantidade de Crianças</label>
+
+            <select id="criancas">
+
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+
+            </select>
+
+            <label for="restricao">
+                Possui alguma restrição alimentar?
+            </label>
+
+            <select id="restricao">
+
+                <option>Nenhuma</option>
+                <option>Vegetariano</option>
+                <option>Vegano</option>
+                <option>Celíaco</option>
+                <option>Intolerante à lactose</option>
+                <option>Diabético</option>
+                <option>Outro</option>
+
+            </select>
+
+            <textarea
+                id="outraRestricao"
+                placeholder="Descreva sua restrição alimentar."
+                style="display:none;"
+            ></textarea>
+
+            <label for="mensagem">
+
+                Mensagem para os noivos
+
+            </label>
+
+            <textarea
+
+                id="mensagem"
+
+                placeholder="Escreva uma mensagem carinhosa (opcional)."
+
+            ></textarea>
+
+            <button
+
+                type="submit"
+
+                class="btn-primary"
+
+            >
+
+                💙 Confirmar Presença
+
+            </button>
+
+        </form>
+
+        <hr>
+
+        <p class="hero-text">
+
+            Obrigado por fazer parte da nossa história.
+
+            Esperamos celebrar este momento com você.
+
+        </p>
+
+    </div>
+
+</section>
+
+<footer class="rodape">
+<hr>
+    <h3>Wedding Platform</h3>
+
+    <p>Desenvolvido por <strong>Felix Freitas Jr</strong></p>
+
+    <p>Versão 1.0.0</p>
+
+    <p>
+        <a href="https://github.com/FelixFreitasJr" target="_blank">GitHub</a>
+        •
+        <a href="https://github.com/FelixFreitasJr/wedding-platform" target="_blank">Documentação</a>
+    </p>
+
+</footer>
+
+<script src="../assets/js/rsvp.js"></script>
+
+</body>
+
+</html>

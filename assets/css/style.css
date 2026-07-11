@@ -6,27 +6,21 @@ body {
     overflow-x: hidden;
 }
 
-/* ======================================================
-   CONTAINER
-====================================================== */
+   /* CONTAINER */
 
 .container {
     width: min(92%, var(--container-width));
     margin: auto;
 }
 
-/* ======================================================
-   SECTION
-====================================================== */
+   /* SECTION */
 
 section {
     width: 100%;
     padding: 100px 20px;
 }
 
-/* ======================================================
-   BUTTONS
-====================================================== */
+   /* BUTTONS */
 
 .btn-primary {
     display: inline-flex;
@@ -46,9 +40,7 @@ section {
     box-shadow: 0 18px 40px rgba(39,180,229,.35);
 }
 
-/* ======================================================
-   HERO
-====================================================== */
+   /* HERO */
 
 #hero {
     min-height: 100vh;
@@ -91,7 +83,6 @@ section {
     font-size: 1.1rem;
 }
 
-
 .section-title {
     font-family: var(--font-heading);
     font-size: 3rem;
@@ -99,9 +90,7 @@ section {
     color: var(--text-color);
 }
 
-/* ======================================================
-   HEADER
-====================================================== */
+   /* HEADER */
 
 #header {
     position: absolute;
@@ -139,9 +128,7 @@ section {
     color: var(--secondary-color);
 }
 
-/* ======================================================
-   FLORES
-====================================================== */
+   /* FLORES */
 
 .flower{
     position:absolute;
@@ -169,9 +156,7 @@ section {
     right:0;
 }
 
-/* ======================================================
-   SCROLL
-====================================================== */
+   /* SCROLL */
 
 .scroll-down {
     position: absolute;
@@ -205,10 +190,7 @@ section {
 
 }
 
-
-/* ======================================================
-   CONTAGEM REGRESSIVA
-====================================================== */
+   /* CONTAGEM REGRESSIVA */
 
 #countdown{
     text-align:center;
@@ -222,18 +204,13 @@ section {
 }
 
 .contador-grid{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:25px;
-
     flex-wrap:wrap;
-
 }
+
 .tempo{
     width:140px;
     padding:25px;
@@ -245,261 +222,257 @@ section {
 }
 
 .tempo span{
-
     display:block;
-
     font-size:3rem;
-
     font-weight:700;
-
     color:var(--secondary-color);
-
 }
 
 .tempo small{
-
     display:block;
-
     margin-top:8px;
-
     color:var(--text-light);
-
     font-size:1rem;
-
 }
 
-/* ======================================================
-   NOSSA HISTÓRIA
-====================================================== */
+   /* NOSSA HISTÓRIA */
 
 #story{
-
     text-align:center;
-
 }
 
 .story-text{
-
     max-width:700px;
-
     margin:40px auto;
-
     line-height:1.8;
-
     color:var(--text-light);
-
     font-size:1.1rem;
-
 }
 
-/* ======================================================
-   CRONOGRAMA
-====================================================== */
+   /* CRONOGRAMA */
 
 #schedule{
-
     text-align:center;
-
 }
 
 .timeline{
-
     display:flex;
-
     justify-content:center;
-
     gap:30px;
-
     flex-wrap:wrap;
-
     margin-top:50px;
-
 }
 
 .timeline-card{
-
     width:320px;
-
     padding:30px;
-
     border-radius:20px;
-
     background:rgba(255,255,255,.35);
-
     backdrop-filter:blur(8px);
-
     border:1px solid rgba(255,255,255,.5);
-
     box-shadow:0 8px 25px rgba(0,0,0,.08);
-
 }
 
 .timeline-card h3{
-
     margin-bottom:20px;
-
     color:var(--secondary-color);
-
     font-family:var(--font-heading);
-
     font-size:2rem;
-
 }
 
 .timeline-card p{
-
     margin:10px 0;
-
     color:var(--text-light);
-
 }
 
-/* ======================================================
-   LOCAL
-====================================================== */
+   /* LOCAL */
 
 #location{
-
     text-align:center;
-
 }
 
 .location-text{
-
     max-width:700px;
-
     margin:20px auto 40px;
-
     color:var(--text-light);
-
 }
 
 .location-card{
-
     max-width:600px;
-
     margin:auto;
-
     padding:35px;
-
     border-radius:20px;
-
     background:rgba(255,255,255,.35);
-
     backdrop-filter:blur(8px);
-
     border:1px solid rgba(255,255,255,.5);
-
     box-shadow:0 8px 25px rgba(0,0,0,.08);
-
 }
 
 .location-card h3{
-
     font-family:var(--font-heading);
-
     font-size:2rem;
-
     margin-bottom:15px;
-
     color:var(--secondary-color);
-
 }
 
 .location-card p{
-
     margin-bottom:30px;
-
     color:var(--text-light);
-
 }
 
-/* ======================================================
-   LISTA DE PRESENTES
-====================================================== */
+   /* LISTA DE PRESENTES */
 
 #gift-list{
-
     text-align:center;
-
 }
 
 .gift-text{
-
     max-width:700px;
-
     margin:20px auto 50px;
-
     color:var(--text-light);
-
 }
 
 .gift-grid{
-
     display:flex;
-
     justify-content:center;
-
     gap:30px;
-
     flex-wrap:wrap;
-
 }
 
 .gift-card{
-
     width:320px;
-
     padding:35px 25px;
-
     border-radius:20px;
-
     background:rgba(255,255,255,.35);
-
     backdrop-filter:blur(8px);
-
     border:1px solid rgba(255,255,255,.5);
-
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-
     transition:.3s;
-
 }
 
 .gift-card:hover{
-
     transform:translateY(-8px);
-
     box-shadow:0 18px 40px rgba(0,0,0,.15);
-
 }
 
 .gift-icon{
-
     font-size:3rem;
-
     margin-bottom:20px;
-
 }
 
 .gift-card h3{
-
     font-family:var(--font-heading);
-
     font-size:2rem;
-
     color:var(--secondary-color);
-
     margin-bottom:20px;
-
 }
 
 .gift-card p{
-
     color:var(--text-light);
-
     line-height:1.7;
-
     margin-bottom:30px;
+}
 
+   /* RODAPÉ */
+
+.rodape{
+    margin-top:80px;
+    padding:30px 20px;
+    text-align:center;
+    font-size:.95rem;
+    color:var(--text-light);
+    border-top:1px solid rgba(255,255,255,.3);
+}
+
+.rodape p{
+    margin:8px 0;
+}
+
+.rodape a{
+    color:var(--secondary-color);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.rodape a:hover{
+    text-decoration:underline;
+}
+
+.local-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.local-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.local-card:hover{
+    transform:translateY(-8px);
+}
+
+.local-card h3{
+    margin-bottom:20px;
+    color:var(--color-primary);
+}
+
+.local-card p{
+    margin:10px 0;
+}
+
+.local-card .btn{
+    margin-top:20px;
+}
+
+/* O GRANDE DIA */
+
+#evento{
+    padding:100px 20px;
+}
+
+.evento-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    margin-top:60px;
+}
+
+.evento-card{
+    background:#ffffffcc;
+    backdrop-filter:blur(8px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.evento-card:hover{
+    transform:translateY(-10px);
+}
+
+.icone{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.evento-card h3{
+    font-family:var(--font-heading);
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.evento-card p{
+    margin:12px 0;
+}
+
+.evento-card .btn{
+    margin-top:25px;
 }
