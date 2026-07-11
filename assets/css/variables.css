@@ -3,20 +3,25 @@
     /* Cores */
 
     --primary-color: #A9D6F5;
+
     --secondary-color: #27B4E5;
+
     --accent-color: #8FB996;
 
     --white: #FFFFFF;
 
-    --background: #F8FCFF;
+    --background-color: #F8FCFF;
 
     --text-color: #3D4A57;
 
-    --text-light: #6E7B88;
+    --text-light: #72808D;
 
-    --border-color: #D9EAF5;
-
-    --shadow: rgba(61, 74, 87, .08);
+    --gradient-primary: linear-gradient(
+        180deg,
+        #A9D6F5 0%,
+        #F8FCFF 40%,
+        #FFFFFF 100%
+    );
 
     /* Fontes */
 
@@ -26,12 +31,8 @@
 
     --font-body: "Poppins", sans-serif;
 
-    /* Tamanhos */
+    /* Layout */
 
     --container-width: 1200px;
-
-    --radius: 18px;
-
-    --transition: .35s ease;
 
 }

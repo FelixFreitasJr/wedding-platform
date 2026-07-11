@@ -1,27 +1,158 @@
-header{
+/* ======================================================
+   BODY
+====================================================== */
 
-    width:100%;
+body {
 
-}
+    background: var(--gradient-primary);
 
-main{
+    color: var(--text-color);
 
-    width:100%;
+    font-family: var(--font-body);
 
-}
+    line-height: 1.6;
 
-section{
-
-    width:100%;
-
-    padding:80px 20px;
+    overflow-x: hidden;
 
 }
 
-.container{
+/* ======================================================
+   CONTAINER
+====================================================== */
 
-    width:min(100%,1200px);
+.container {
 
-    margin:auto;
+    width: min(92%, var(--container-width));
+
+    margin: auto;
+
+}
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+section {
+
+    width: 100%;
+
+    padding: 100px 20px;
+
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.btn-primary {
+
+    display: inline-block;
+
+    padding: 16px 36px;
+
+    background: var(--secondary-color);
+
+    color: var(--white);
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+#hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.hero-subtitle {
+
+    color: var(--accent-color);
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: .9rem;
+
+    margin-bottom: 15px;
+
+}
+
+.hero-title {
+
+    font-family: var(--font-title);
+
+    font-size: clamp(4rem, 10vw, 8rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+}
+
+.hero-title span {
+
+    display: block;
+
+    font-size: 4rem;
+
+}
+
+.hero-date {
+
+    font-family: var(--font-heading);
+
+    font-size: 1.7rem;
+
+    margin-bottom: 30px;
+
+}
+
+.hero-text {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    margin-bottom: 40px;
+
+    font-size: 1.1rem;
+
+}
+
+
+.section-title {
+
+    font-family: var(--font-heading);
+
+    font-size: 3rem;
+
+    text-align: center;
+
+    color: var(--text-color);
 
 }

@@ -5,41 +5,20 @@
 }
 
 html{
-
     scroll-behavior:smooth;
-
-}
-
-body{
-
-    background:var(--background);
-
-    color:var(--text-color);
-
-    font-family:var(--font-body);
-
 }
 
 img{
-
-    display:block;
-
     max-width:100%;
-
+    display:block;
 }
 
 a{
-
     text-decoration:none;
-
     color:inherit;
-
 }
 
 button{
-
-    border:none;
-
     cursor:pointer;
-
+    border:none;
 }
