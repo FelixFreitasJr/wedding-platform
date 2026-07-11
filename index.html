@@ -14,9 +14,7 @@
     <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -24,24 +22,31 @@
     <!-- CSS -->
 
     <link rel="stylesheet" href="./assets/css/reset.css">
-
     <link rel="stylesheet" href="./assets/css/variables.css">
-
     <link rel="stylesheet" href="./assets/css/style.css">
-
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 
 <body>
 
-    <!-- ===========================
-            HEADER
-    ============================ -->
+<header id="header">
 
-    <header>
-
-    </header>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                Viviane & Everson
+            </div>
+            <ul class="menu">
+                <li><a href="#story">Nossa História</a></li>
+                <li><a href="#schedule">Cronograma</a></li>
+                <li><a href="#location">Local</a></li>
+                <li><a href="#gift-list">Presentes</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- ===========================
             MAIN
@@ -52,9 +57,19 @@
         <!-- HERO -->
 
         <section id="hero">
+            <img src="./assets/images/flowers/top-left.png"
+            class="flower flower-top-left"
+            alt="">
+
+            <img src="./assets/images/flowers/top-center.png"
+            class="flower flower-top-center"
+            alt="">
+
+            <img src="./assets/images/flowers/top-right.png"
+            class="flower flower-top-right"
+            alt="">
 
             <div class="container">
-
                 <p class="hero-subtitle">
                     Temos a alegria de convidar você para celebrar conosco
                 </p>
@@ -80,37 +95,207 @@
                 </a>
 
             </div>
+            <div class="scroll-down">
 
+            ↓
+
+            </div>
         </section>
 
-        <section id="countdown">
+<section id="countdown">
+
     <div class="container">
-        <h2 class="section-title">Contagem Regressiva</h2>
+
+        <h2 class="section-title">
+            Contagem Regressiva
+        </h2>
+
+        <p class="countdown-subtitle">
+            Faltam apenas
+        </p>
+
+        <div class="contador-grid">
+
+            <div class="tempo">
+                <span id="dias">0</span>
+                <small>Dias</small>
+            </div>
+
+            <div class="tempo">
+                <span id="horas">0</span>
+                <small>Horas</small>
+            </div>
+
+            <div class="tempo">
+                <span id="minutos">0</span>
+                <small>Minutos</small>
+            </div>
+
+            <div class="tempo">
+                <span id="segundos">0</span>
+                <small>Segundos</small>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <section id="story">
+
     <div class="container">
-        <h2 class="section-title">Nossa História</h2>
+
+        <h2 class="section-title">
+            Nossa História
+        </h2>
+
+        <p class="story-text">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            ultricies, erat sed tincidunt aliquam, nunc ipsum consequat nibh,
+            vitae tincidunt mauris lorem sed nisl.
+
+            <br><br>
+
+            Em breve nossa história estará aqui. ❤️
+
+        </p>
+
     </div>
+
 </section>
 
 <section id="schedule">
+
     <div class="container">
-        <h2 class="section-title">Cronograma</h2>
+
+        <h2 class="section-title">
+            Cronograma
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-card">
+
+                <h3>Cerimônia</h3>
+
+                <p><strong>🕓 Horário:</strong> 16:00</p>
+
+                <p>Igreja a definir.</p>
+
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>Recepção</h3>
+
+                <p><strong>🕔 Horário:</strong> 18:00</p>
+
+                <p>Salão de festas a definir.</p>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <section id="location">
+
     <div class="container">
-        <h2 class="section-title">Local</h2>
+
+        <h2 class="section-title">
+            Local da Cerimônia
+        </h2>
+
+        <p class="location-text">
+            Em breve divulgaremos o endereço completo da cerimônia e da recepção.
+        </p>
+
+        <div class="location-card">
+
+            <h3>Igreja / Cerimônia</h3>
+
+            <p>Endereço a definir.</p>
+
+            <a href="#" class="btn-primary">
+                📍 Abrir no Google Maps
+            </a>
+
+        </div>
+
     </div>
+
 </section>
 
 <section id="gift-list">
+
     <div class="container">
-        <h2 class="section-title">Lista de Presentes</h2>
+
+        <h2 class="section-title">
+            Lista de Presentes
+        </h2>
+
+        <p class="gift-text">
+            Sua presença é o nosso maior presente. Mas, caso deseje nos presentear, preparamos algumas opções com muito carinho.
+        </p>
+
+        <div class="gift-grid">
+
+            <div class="gift-card">
+
+                <div class="gift-icon">🛍️</div>
+
+                <h3>Lista Amazon</h3>
+
+                <p>
+                    Escolha um presente da nossa lista de desejos na Amazon.
+                </p>
+
+                <a href="#" class="btn-primary">
+                    Ver Lista
+                </a>
+
+            </div>
+
+            <div class="gift-card">
+
+                <div class="gift-icon">✈️</div>
+
+                <h3>Lua de Mel</h3>
+
+                <p>
+                    Contribua com nossa viagem e faça parte dessa nova etapa.
+                </p>
+
+                <a href="#" class="btn-primary">
+                    Contribuir
+                </a>
+
+            </div>
+
+            <div class="gift-card">
+
+                <div class="gift-icon">❤️</div>
+
+                <h3>Pix</h3>
+
+                <p>
+                    Caso prefira, você pode nos presentear através de uma chave Pix.
+                </p>
+
+                <a href="#" class="btn-primary">
+                    Ver Chave
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <section id="rsvp">
@@ -132,6 +317,7 @@
     <!-- JavaScript -->
 
     <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/contador.js"></script>
 
 </body>
 
