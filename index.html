@@ -34,15 +34,14 @@
 
     <div class="container">
         <nav class="navbar">
-            <div class="logo">
-                Viviane & Everson
-            </div>
+            <div class="logo" data-couple>Viviane & Everson</div>
             <ul class="menu">
                 <li><a href="#story">Nossa História</a></li>
                 <li><a href="#schedule">Cronograma</a></li>
                 <li><a href="#location">Local</a></li>
                 <li><a href="#gift-list">Presentes</a></li>
                 <li><a href="#rsvp">RSVP</a></li>
+                <li><a href="./pages/login.html">Admin</a></li>
             </ul>
         </nav>
     </div>
@@ -70,17 +69,17 @@
             alt="">
 
             <div class="container">
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-invitation-subtitle>
                     Temos a alegria de convidar você para celebrar conosco
                 </p>
 
                 <h1 class="hero-title">
-                    Viviane
+                    <span data-bride>Viviane</span>
                     <span>&</span>
-                    Everson
+                    <span data-groom>Everson</span>
                 </h1>
 
-                <p class="hero-date">
+                <p class="hero-date" data-event-date>
                     19 de Junho de 2027
                 </p>
 
@@ -152,13 +151,7 @@
 
         <p class="story-text">
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            ultricies, erat sed tincidunt aliquam, nunc ipsum consequat nibh,
-            vitae tincidunt mauris lorem sed nisl.
-
-            <br><br>
-
-            Em breve nossa história estará aqui. ❤️
+            <span data-story>Em breve nossa história estará aqui. ❤️</span>
 
         </p>
 
@@ -180,13 +173,15 @@
 
                 <h3>Cerimônia</h3>
 
-                <p><strong>19 de Junho de 2027</strong></p>
+                <p><strong data-event-date>19 de Junho de 2027</strong></p>
 
-                <p>15:30</p>
+                <p data-event-time>15:30</p>
 
-                <p>Igreja Nossa Senhora</p>
+                <p data-ceremony-place>Igreja Nossa Senhora</p>
 
-                <a href="#" class="btn">Ver localização</a>
+                <p data-ceremony-address>Rio de Janeiro - RJ</p>
+
+                <a href="#" class="btn" data-ceremony-map>Ver localização</a>
 
             </div>
 
@@ -196,13 +191,15 @@
 
                 <h3>Recepção</h3>
 
-                <p><strong>19 de Junho de 2027</strong></p>
+                <p><strong data-event-date>19 de Junho de 2027</strong></p>
 
-                <p>18:00</p>
+                <p data-reception-time>18:00</p>
 
-                <p>Espaço Garden</p>
+                <p data-reception-place>Espaço Garden</p>
 
-                <a href="#" class="btn">Ver localização</a>
+                <p data-reception-address>Rio de Janeiro - RJ</p>
+
+                <a href="#" class="btn" data-reception-map>Ver localização</a>
 
             </div>
 
@@ -221,7 +218,7 @@
             Lista de Presentes
         </h2>
 
-        <p class="gift-text">
+        <p class="gift-text" data-gift-intro>
             Sua presença é o nosso maior presente. Mas, caso deseje nos presentear, preparamos algumas opções com muito carinho.
         </p>
 
@@ -237,7 +234,7 @@
                     Escolha um presente da nossa lista de desejos na Amazon.
                 </p>
 
-                <a href="#" class="btn-primary">
+                <a href="#" class="btn-primary" data-gift-list>
                     Ver Lista
                 </a>
 
@@ -253,7 +250,7 @@
                     Contribua com nossa viagem e faça parte dessa nova etapa.
                 </p>
 
-                <a href="#" class="btn-primary">
+                <a href="#" class="btn-primary" data-honeymoon>
                     Contribuir
                 </a>
 
@@ -269,9 +266,7 @@
                     Caso prefira, você pode nos presentear através de uma chave Pix.
                 </p>
 
-                <a href="#" class="btn-primary">
-                    Ver Chave
-                </a>
+                <span class="pix-key" data-pix-key>Ver Chave</span>
 
             </div>
 
@@ -325,8 +320,8 @@
 
     <!-- JavaScript -->
 
-    <script type="module" src="./assets/js/main.js"></script>
-    <script src="./assets/js/contador.js"></script>
+    <script type="module" src="./assets/js/render-event.js"></script>
+    <script type="module" src="./assets/js/contador.js"></script>
 
 </body>
 
