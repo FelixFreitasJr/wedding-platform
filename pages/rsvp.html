@@ -26,17 +26,17 @@
 
     <div class="container">
 
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-invitation-subtitle>
             Temos a alegria de convidar você para celebrar conosco
         </p>
 
         <h1 class="hero-title">
-            Viviane
+            <span data-bride>Viviane</span>
             <span>&</span>
-            Everson
+            <span data-groom>Everson</span>
         </h1>
 
-        <p class="hero-date">
+        <p class="hero-date" data-event-date>
             19 de Junho de 2027
         </p>
 
@@ -72,6 +72,15 @@
                 placeholder="(21) 99999-9999"
                 required
             >
+
+            <label for="tipoConvidado">Tipo de convidado</label>
+
+            <select id="tipoConvidado">
+                <option>Convidado</option>
+                <option>Padrinho</option>
+                <option>Madrinha</option>
+                <option>Dama/Pajem</option>
+            </select>
 
             <label>Você irá comparecer?</label>
 
@@ -163,6 +172,8 @@
 
         </form>
 
+        <p id="rsvpStatus" class="hero-text" aria-live="polite"></p>
+
         <hr>
 
         <p class="hero-text">
@@ -193,7 +204,7 @@
 
 </footer>
 
-<script src="../assets/js/rsvp.js"></script>
+<script type="module" src="../assets/js/rsvp.js"></script>
 
 </body>
 
