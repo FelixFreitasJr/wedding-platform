@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo | Wedding Platform</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <main class="admin-shell">
+        <section class="admin-card">
+            <h1>Acesso administrativo</h1>
+            <p>Entre ou cadastre um novo usuário para configurar o convite.</p>
+            <form id="loginForm">
+                <label for="loginEmail">E-mail</label>
+                <input id="loginEmail" type="email" required>
+                <label for="loginPassword">Senha</label>
+                <input id="loginPassword" type="password" required>
+                <button class="btn-primary" type="submit">Entrar</button>
+            </form>
+            <hr>
+            <h2>Novo cadastro</h2>
+            <form id="registerForm">
+                <label for="registerName">Nome</label>
+                <input id="registerName" type="text" required>
+                <label for="registerEmail">E-mail</label>
+                <input id="registerEmail" type="email" required>
+                <label for="registerPassword">Senha</label>
+                <input id="registerPassword" type="password" minlength="6" required>
+                <button class="btn-primary" type="submit">Cadastrar e acessar</button>
+            </form>
+            <p id="authMessage" class="form-message" aria-live="polite"></p>
+        </section>
+    </main>
+    <script type="module" src="../assets/js/auth.js"></script>
+</body>
+</html>

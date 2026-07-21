@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Wedding Platform</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <main class="admin-shell admin-wide">
+        <section class="admin-card">
+            <div class="admin-header">
+                <div>
+                    <h1>Painel administrativo</h1>
+                    <p>Configure os dados usados para gerar o convite e a página pública.</p>
+                </div>
+                <button id="logoutButton" class="btn-link" type="button">Sair</button>
+            </div>
+            <form id="adminForm" class="admin-grid">
+                <fieldset><legend>Noivos e evento</legend>
+                    <label>Noiva<input name="bride" required></label>
+                    <label>Noivo<input name="groom" required></label>
+                    <label>Texto do convite<input name="invitationSubtitle" required></label>
+                    <label>Data<input name="eventDate" type="date" required></label>
+                    <label>Horário<input name="eventTime" type="time" required></label>
+                    <label>Nossa história<textarea name="story"></textarea></label>
+                </fieldset>
+                <fieldset><legend>Locais</legend>
+                    <label>Local da cerimônia<input name="ceremonyPlace" required></label>
+                    <label>Endereço da cerimônia<input name="ceremonyAddress"></label>
+                    <label>Link do mapa da cerimônia<input name="ceremonyMapUrl" type="url"></label>
+                    <label>Local da recepção<input name="receptionPlace"></label>
+                    <label>Horário da recepção<input name="receptionTime" type="time"></label>
+                    <label>Endereço da recepção<input name="receptionAddress"></label>
+                    <label>Link do mapa da recepção<input name="receptionMapUrl" type="url"></label>
+                </fieldset>
+                <fieldset><legend>Presentes e contato</legend>
+                    <label>Texto da lista de presentes<textarea name="giftIntro"></textarea></label>
+                    <label>Link da lista de presentes<input name="giftListUrl" type="url"></label>
+                    <label>Link da lua de mel<input name="honeymoonUrl" type="url"></label>
+                    <label>Chave Pix<input name="pixKey"></label>
+                    <label>WhatsApp dos noivos<input name="whatsapp" placeholder="5521999999999" required></label>
+                    <label>E-mail dos noivos<input name="email" type="email" required></label>
+                </fieldset>
+                <fieldset><legend>Cores do layout</legend>
+                    <label>Cor primária<input name="primaryColor" type="color"></label>
+                    <label>Cor secundária<input name="secondaryColor" type="color"></label>
+                    <label>Cor de destaque<input name="accentColor" type="color"></label>
+                </fieldset>
+                <button class="btn-primary" type="submit">Salvar configurações</button>
+                <p id="adminMessage" class="form-message" aria-live="polite"></p>
+            </form>
+            <div class="admin-actions">
+                <a class="btn-primary" href="./convite.html">Ver convite gerado</a>
+                <a class="btn-primary" href="../index.html">Ver site completo</a>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="../assets/js/admin.js"></script>
+</body>
+</html>
