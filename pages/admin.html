@@ -11,47 +11,80 @@
 </head>
 <body>
     <main class="admin-shell admin-wide">
-        <section class="admin-card">
+        <section class="admin-card admin-dashboard">
             <div class="admin-header">
                 <div>
+                    <span class="admin-eyebrow">Central de eventos</span>
                     <h1>Painel administrativo</h1>
-                    <p>Configure os dados usados para gerar o convite e a página pública.</p>
+                    <p>Configure seu evento, gere o convite e acompanhe a experiência dos convidados em poucos passos.</p>
                 </div>
                 <button id="logoutButton" class="btn-link" type="button">Sair</button>
             </div>
+
+            <div class="admin-steps" aria-label="Etapas de configuração">
+                <div><strong>1</strong><span>Dados do evento</span></div>
+                <div><strong>2</strong><span>Convite e história</span></div>
+                <div><strong>3</strong><span>Publicar e receber RSVPs</span></div>
+            </div>
+
             <form id="adminForm" class="admin-grid">
-                <fieldset><legend>Noivos e evento</legend>
-                    <label>Noiva<input name="bride" required></label>
-                    <label>Noivo<input name="groom" required></label>
-                    <label>Texto do convite<input name="invitationSubtitle" required></label>
+                <fieldset class="fieldset-highlight"><legend>Evento</legend>
+                    <label>Tipo de evento
+                        <select name="eventType" required>
+                            <option value="casamento">Casamento</option>
+                            <option value="aniversario">Aniversário</option>
+                            <option value="formatura">Formatura</option>
+                            <option value="cha-de-bebe">Chá de bebê</option>
+                            <option value="corporativo">Evento corporativo</option>
+                            <option value="outro">Outro evento</option>
+                        </select>
+                    </label>
+                    <label>Anfitriã / Noiva<input name="bride" required></label>
+                    <label>Anfitrião / Noivo<input name="groom" required></label>
+                    <label>Texto de abertura<input name="invitationSubtitle" required></label>
                     <label>Data<input name="eventDate" type="date" required></label>
                     <label>Horário<input name="eventTime" type="time" required></label>
-                    <label>Nossa história<textarea name="story"></textarea></label>
+                    <label>Dress code<input name="dressCode" placeholder="Ex.: traje social, esporte fino"></label>
                 </fieldset>
+
+                <fieldset><legend>História do convite</legend>
+                    <div class="story-tools">
+                        <p>Escreva manualmente ou gere uma sugestão romântica com IA usando os dados preenchidos no formulário.</p>
+                        <button id="generateStoryButton" class="btn-secondary" type="button">✨ Gerar história com IA</button>
+                    </div>
+                    <label class="full-field">Nossa história<textarea name="story" rows="8"></textarea></label>
+                    <small id="aiStoryStatus" class="helper-text" aria-live="polite"></small>
+                </fieldset>
+
                 <fieldset><legend>Locais</legend>
-                    <label>Local da cerimônia<input name="ceremonyPlace" required></label>
-                    <label>Endereço da cerimônia<input name="ceremonyAddress"></label>
-                    <label>Link do mapa da cerimônia<input name="ceremonyMapUrl" type="url"></label>
-                    <label>Local da recepção<input name="receptionPlace"></label>
+                    <label>Local principal<input name="ceremonyPlace" required></label>
+                    <label>Endereço principal<input name="ceremonyAddress"></label>
+                    <label>Link do mapa principal<input name="ceremonyMapUrl" type="url"></label>
+                    <label>Local da recepção / segunda etapa<input name="receptionPlace"></label>
                     <label>Horário da recepção<input name="receptionTime" type="time"></label>
                     <label>Endereço da recepção<input name="receptionAddress"></label>
                     <label>Link do mapa da recepção<input name="receptionMapUrl" type="url"></label>
                 </fieldset>
+
                 <fieldset><legend>Presentes e contato</legend>
-                    <label>Texto da lista de presentes<textarea name="giftIntro"></textarea></label>
+                    <label class="full-field">Texto da lista de presentes<textarea name="giftIntro"></textarea></label>
                     <label>Link da lista de presentes<input name="giftListUrl" type="url"></label>
-                    <label>Link da lua de mel<input name="honeymoonUrl" type="url"></label>
+                    <label>Link de contribuição / lua de mel<input name="honeymoonUrl" type="url"></label>
                     <label>Chave Pix<input name="pixKey"></label>
-                    <label>WhatsApp dos noivos<input name="whatsapp" placeholder="5521999999999" required></label>
-                    <label>E-mail dos noivos<input name="email" type="email" required></label>
+                    <label>WhatsApp dos responsáveis<input name="whatsapp" placeholder="5521999999999" required></label>
+                    <label>E-mail dos responsáveis<input name="email" type="email" required></label>
                 </fieldset>
+
                 <fieldset><legend>Cores do layout</legend>
                     <label>Cor primária<input name="primaryColor" type="color"></label>
                     <label>Cor secundária<input name="secondaryColor" type="color"></label>
                     <label>Cor de destaque<input name="accentColor" type="color"></label>
                 </fieldset>
-                <button class="btn-primary" type="submit">Salvar configurações</button>
-                <p id="adminMessage" class="form-message" aria-live="polite"></p>
+
+                <div class="sticky-save">
+                    <button class="btn-primary" type="submit">Salvar configurações</button>
+                    <p id="adminMessage" class="form-message" aria-live="polite"></p>
+                </div>
             </form>
             <div class="admin-actions">
                 <a class="btn-primary" href="./convite.html">Ver convite gerado</a>

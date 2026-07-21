@@ -1,9 +1,6 @@
-import { getEventConfig } from "./storage.js";
+import { loadEventConfig } from "./storage.js";
 
-const config = getEventConfig();
-const weddingDate = new Date(`${config.eventDate}T${config.eventTime || "00:00"}:00`);
-
-function atualizarContador() {
+function atualizarContador(weddingDate) {
     const agora = new Date();
     const diferenca = weddingDate - agora;
     const title = document.querySelector("#countdown .section-title");
@@ -28,5 +25,12 @@ function atualizarContador() {
     document.getElementById("segundos").textContent = segundos;
 }
 
-setInterval(atualizarContador, 1000);
-atualizarContador();
+async function initCountdown() {
+    const config = await loadEventConfig();
+    const weddingDate = new Date(`${config.eventDate}T${config.eventTime || "00:00"}:00`);
+
+    setInterval(() => atualizarContador(weddingDate), 1000);
+    atualizarContador(weddingDate);
+}
+
+initCountdown();

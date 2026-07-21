@@ -1,3 +1,5 @@
+import { fetchRemoteEventConfig, isSupabaseConfigured } from "./supabase.js";
+
 const STORAGE_KEYS = {
     event: "weddingPlatform.eventConfig",
     users: "weddingPlatform.users",
@@ -8,11 +10,13 @@ const STORAGE_KEYS = {
 const defaultEventConfig = {
     bride: "Viviane",
     groom: "Everson",
+    eventType: "casamento",
     invitationSubtitle: "Temos a alegria de convidar você para celebrar conosco",
     eventDate: "2027-06-19",
     eventTime: "15:30",
     ceremonyPlace: "Igreja Nossa Senhora",
     ceremonyAddress: "Rio de Janeiro - RJ",
+    dressCode: "Traje social",
     ceremonyMapUrl: "",
     receptionPlace: "Espaço Garden",
     receptionTime: "18:00",
@@ -50,6 +54,23 @@ export function getEventConfig() {
         ...defaultEventConfig,
         ...readJson(STORAGE_KEYS.event, {})
     };
+}
+
+
+export async function loadEventConfig() {
+    const localConfig = getEventConfig();
+
+    if (!isSupabaseConfigured) {
+        return localConfig;
+    }
+
+    const remoteConfig = await fetchRemoteEventConfig();
+
+    if (!remoteConfig) {
+        return localConfig;
+    }
+
+    return saveEventConfig(remoteConfig);
 }
 
 export function saveEventConfig(config) {

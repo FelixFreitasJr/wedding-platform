@@ -1,9 +1,22 @@
-import { applyTheme, formatEventDate, getEventConfig } from "./storage.js";
+import { applyTheme, formatEventDate, loadEventConfig } from "./storage.js";
 
 function setText(selector, text) {
     document.querySelectorAll(selector).forEach((element) => {
         element.textContent = text;
     });
+}
+
+function formatEventType(value) {
+    const labels = {
+        casamento: "Casamento",
+        aniversario: "Aniversário",
+        formatura: "Formatura",
+        "cha-de-bebe": "Chá de bebê",
+        corporativo: "Evento corporativo",
+        outro: "Evento"
+    };
+
+    return labels[value] || value || "Evento";
 }
 
 function setHref(selector, href, fallback = "#") {
@@ -20,8 +33,8 @@ function setHref(selector, href, fallback = "#") {
     });
 }
 
-export function renderEventPage() {
-    const config = getEventConfig();
+export async function renderEventPage() {
+    const config = await loadEventConfig();
     const couple = `${config.bride} & ${config.groom}`;
     const formattedDate = formatEventDate(config.eventDate);
 
@@ -31,11 +44,13 @@ export function renderEventPage() {
     setText("[data-couple]", couple);
     setText("[data-bride]", config.bride);
     setText("[data-groom]", config.groom);
+    setText("[data-event-type]", formatEventType(config.eventType));
     setText("[data-invitation-subtitle]", config.invitationSubtitle);
     setText("[data-event-date]", formattedDate);
     setText("[data-event-time]", config.eventTime);
     setText("[data-ceremony-place]", config.ceremonyPlace);
     setText("[data-ceremony-address]", config.ceremonyAddress);
+    setText("[data-dress-code]", config.dressCode || "A definir");
     setText("[data-reception-place]", config.receptionPlace);
     setText("[data-reception-time]", config.receptionTime);
     setText("[data-reception-address]", config.receptionAddress);

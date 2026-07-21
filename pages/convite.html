@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Casamento</title>
+    <title>Convite do Evento</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/variables.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/invitation.css">
 </head>
 <body>
-    <main>
-        <section id="hero">
+    <main class="invitation-page">
+        <section class="invitation-card">
             <img src="../assets/images/flowers/top-left.png" class="flower flower-top-left" alt="">
             <img src="../assets/images/flowers/top-right.png" class="flower flower-top-right" alt="">
-            <div class="container">
-                <p class="hero-subtitle" data-invitation-subtitle>Temos a alegria de convidar você para celebrar conosco</p>
-                <h1 class="hero-title"><span data-bride>Viviane</span><span>&</span><span data-groom>Everson</span></h1>
-                <p class="hero-date" data-event-date>19 de Junho de 2027</p>
-                <p class="hero-text"><span data-ceremony-place>Igreja Nossa Senhora</span> • <span data-event-time>15:30</span></p>
+
+            <p class="hero-subtitle" data-event-type>Casamento</p>
+            <p class="invitation-kicker" data-invitation-subtitle>Temos a alegria de convidar você para celebrar conosco</p>
+
+            <h1 class="hero-title invitation-title"><span data-bride>Viviane</span><span>&</span><span data-groom>Everson</span></h1>
+            <p class="hero-date" data-event-date>19 de Junho de 2027</p>
+
+            <div class="invitation-details">
+                <div>
+                    <strong>Local</strong>
+                    <span data-ceremony-place>Igreja Nossa Senhora</span>
+                </div>
+                <div>
+                    <strong>Horário</strong>
+                    <span data-event-time>15:30</span>
+                </div>
+                <div>
+                    <strong>Traje</strong>
+                    <span data-dress-code>Traje social</span>
+                </div>
+            </div>
+
+            <p class="invitation-story" data-story>Em breve nossa história estará aqui. ❤️</p>
+
+            <div class="invitation-actions">
                 <a href="./rsvp.html" class="btn-primary">Confirmar presença</a>
+                <a href="#" class="btn-outline" data-ceremony-map>Ver localização</a>
             </div>
         </section>
     </main>
